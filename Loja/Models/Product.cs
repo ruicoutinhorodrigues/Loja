@@ -8,11 +8,9 @@ namespace Loja.Models
 {
     public class Product
     {
-        
-        public int ProductID { get; set; }
-
+        [Key]
+        public int ID { get; set; }
         public string Description { get; set; }
-
         public decimal Price { get; set; }
 
         public DateTime LastBuy { get; set; }

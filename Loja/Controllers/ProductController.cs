@@ -12,9 +12,7 @@ namespace Loja.Controllers
 {
     public class ProductController : Controller
     {
-        private StoreContext db = new StoreContext();
-
-
+        private StoreContext db = new StoreContext(); 
 
         // GET: Product
         public ActionResult Index()
@@ -60,7 +58,6 @@ namespace Loja.Controllers
                 }
 
                 return View(product);
-
             }
             catch
             {
@@ -134,6 +131,7 @@ namespace Loja.Controllers
                 if (ModelState.IsValid)
                 {
                     product = db.Products.Find(id);
+
                     if (product == null)
                     {
                         return HttpNotFound();
